@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌦️ Global Weather</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="weather.css">
+</head>
+<body>
+<button class="toggle" onclick="document.body.classList.toggle('dark')">🌙 Dark</button>
 
+<h1>🌍 Global Weather</h1>
+
+<div class="search">
+  <input type="text" id="searchCity" placeholder="🔍 Search City...">
+  <button onclick="searchCity()">Search</button>
+  <button onclick="getLocationWeather()">📍 Current Location</button>
+</div>
+
+<div class="card">
+  <div id="city">CITY</div>
+
+  <div class="top-info">
+    <div class="temp" id="temp">--°C</div>
+    <div class="desc">
+      <img id="icon" src="">
+      <span id="condition">--</span>
+    </div>
+  </div>
+
+  <div class="details">
+    <p id="feels">Feels Like: --°C</p>
+    <p id="humidity">Humidity: --%</p>
+    <p id="windspeed">Wind: -- km/h</p>
+    <p id="sun">☀️ Sunrise: -- | 🌇 Sunset: --</p>
+  </div>
+
+  <div class="weather-layout">
+    <div id="chartContainer"><canvas id="tempChart"></canvas></div>
+    <div id="forecast"></div>
+  </div>
+</div>
+<script src="weather.js"></script>
+</body>
+</html>
